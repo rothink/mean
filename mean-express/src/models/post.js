@@ -18,6 +18,6 @@ const Post = Schema({
         type: Date,
         default: new Date()
     }
-})
+});
 
-module.exports = mongoose.model('Post');
+module.exports = mongoose.model('Post', Post);
