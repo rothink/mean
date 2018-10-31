@@ -1,6 +1,8 @@
 const Post = require('../../models/post');
+const slugify = require('slugify');
 
 module.exports = async (req, res) => {
+    req.body.slug = slugify(req.body.title, {lower: true});
     const post = new Post(req.body);
 
     try {
